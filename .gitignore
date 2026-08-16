@@ -1,0 +1,4 @@
+/lighting-center
+*.test
+*.out
+.DS_Store
