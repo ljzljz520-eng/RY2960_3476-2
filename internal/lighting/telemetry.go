@@ -152,7 +152,7 @@ func NewCenter(verifier *Signer, repository Repository) (*Center, error) {
 
 func (c *Center) ProcessBatch(ctx context.Context, messages []Telemetry) (BatchResult, error) {
 	result := BatchResult{Received: len(messages)}
-	for i := 0; i < len(messages)-1; i++ {
+	for i := 0; i < len(messages); i++ {
 		if err := ctx.Err(); err != nil {
 			return result, err
 		}
